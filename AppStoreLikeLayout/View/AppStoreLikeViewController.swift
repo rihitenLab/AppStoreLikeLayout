@@ -40,8 +40,19 @@ class AppStoreLikeViewController: UIViewController {
 
     @IBOutlet private var collectionView: UICollectionView!
 
-    let data = [Section(title: "section-1", pagingGruop: SingleItemGroup.create(), items: (1...18).map{ Item(number: $0) }),
-                Section(title: "section-2", pagingGruop: TripleItemGroup.create(), items: (1...18).map{ Item(number: $0) })]
+    let data = [Section(title: "section-1", pagingGruop: SingleItemGroup.create(),
+                        items: (1...18).map{ Item(number: $0) }),
+                Section(title: "section-2", pagingGruop: TripleItemGroup.create(),
+                        items: (1...18).map{ Item(number: $0) }),
+                Section(title: "section-3", pagingGruop: SingleItemGroup.create(),
+                        items: (1...18).map{ Item(number: $0) }),
+                Section(title: "section-4", pagingGruop: TripleItemGroup.create(),
+                        items: (1...18).map{ Item(number: $0) }),
+                Section(title: "section-5", pagingGruop: SingleItemGroup.create(),
+                        items: (1...18).map{ Item(number: $0) }),
+                Section(title: "section-6", pagingGruop: TripleItemGroup.create(),
+                        items: (1...18).map{ Item(number: $0) })
+    ]
 
     var dataSource: UICollectionViewDiffableDataSource<Section, Item>! = nil
 
